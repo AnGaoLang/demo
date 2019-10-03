@@ -1,6 +1,13 @@
 import Properties from '../basicsProperties/basicsProperties'
 
 export default class component {
+  // 组件相对应的html对象
+  element = null
+  constructor (id, type, imgsrc) {
+    this.componentId = id
+    this.type = type
+    this.backgroundImage = imgsrc
+  }
   componentId = ''
   // 组件的编码
   code = '123'
@@ -10,13 +17,6 @@ export default class component {
   backgroundImage = ''
   // properties类的实例
   properties = new Properties()
-  // 组件相对应的html对象
-  element = null
-  constructor (id, type, imgsrc) {
-    this.componentId = id
-    this.type = type
-    this.backgroundImage = imgsrc
-  }
   get style () {
     return this.properties.style
   }
